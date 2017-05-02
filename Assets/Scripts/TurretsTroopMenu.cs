@@ -7,7 +7,7 @@ public class TurretsTroopMenu : MonoBehaviour {
 
     public GameAdmin ga;
     private Turret[] turrets;
-    private GameObject[] troops;
+    private Troop[] troops;
     private int num_of_turrets = 11;
     private int num_of_troops = 11;
 
@@ -15,21 +15,28 @@ public class TurretsTroopMenu : MonoBehaviour {
     public Turret turret1;
     public Turret turret2;
 
+    public Troop troop0;
+
     // Use this for initialization
     void Start () {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
         ga.can_place_turret = true;
         turrets = new Turret[num_of_turrets];
-        troops = new GameObject[num_of_troops];
+        troops = new Troop[num_of_troops];
 
         turrets[0] = turret0;
         turrets[1] = turret1;
         turrets[2] = turret2;
+
+        troops[0] = troop0;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Instantiate(troops[0], new Vector2(-9.59f, 0.2f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+        }
 	}
 
     public void CreateTurret()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameAdmin
   - Turret
+  - Troop
   layers:
   - Default
   - TransparentFX
