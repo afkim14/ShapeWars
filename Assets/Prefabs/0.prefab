@@ -35,10 +35,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4770989026504250}
   - component: {fileID: 212689659032125630}
-  - component: {fileID: 114355748384089082}
   - component: {fileID: 50564369289291504}
   - component: {fileID: 61379359243043430}
   - component: {fileID: 251906755005155500}
+  - component: {fileID: 114185188579226144}
   m_Layer: 0
   m_Name: 0
   m_TagString: Turret
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.9999995, y: 4.9999995}
---- !u!114 &114355748384089082
+--- !u!114 &114185188579226144
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,12 +115,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1638452788579888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 794a2e9d9f105df468bfc0746e1549c2, type: 3}
+  m_Script: {fileID: 11500000, guid: f4733e68ed867124f92aa8cb48af1ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ga: {fileID: 0}
   placed: 0
-  placed_pos: {x: -3.6927655, y: -0.07171297, z: -10}
+  placed_pos: {x: 0, y: 0, z: 0}
   shootingPoint: {fileID: 4730067861669546}
   bullet: {fileID: 114721633985928848, guid: 907982f466e024f46841479c9a590ae7, type: 2}
   target: {fileID: 0}

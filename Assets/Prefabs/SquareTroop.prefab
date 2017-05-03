@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212428902118201538}
   - component: {fileID: 61275936980741900}
   - component: {fileID: 251225338562376764}
-  - component: {fileID: 114694661893409012}
   - component: {fileID: 50424677711777798}
+  - component: {fileID: 114933770680719568}
   m_Layer: 0
-  m_Name: 9
+  m_Name: SquareTroop
   m_TagString: Troop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 5, y: 5}
---- !u!114 &114694661893409012
+--- !u!114 &114933770680719568
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,11 +86,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879467263852672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4effbb98306f9bf44b06d604573b1609, type: 3}
+  m_Script: {fileID: 11500000, guid: 673d0ece762e1314e971e3adf2db47db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  maxSpeed: 2
+  maxSpeed: 0
+  maxHealth: 0
+  currHealth: 0
 --- !u!212 &212428902118201538
 SpriteRenderer:
   m_ObjectHideFlags: 1

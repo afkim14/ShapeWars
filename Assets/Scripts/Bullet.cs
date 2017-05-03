@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public float bulletTime;
     public float maxBulletTime = 2.0f;
+    private float maxSpeed = 5.0f;
 
     // Use this for initialization
     void Start () {
@@ -14,6 +15,8 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        // make sure bullet doesn't last forever
         bulletTime += Time.deltaTime;
         if (bulletTime >= maxBulletTime)
         {
