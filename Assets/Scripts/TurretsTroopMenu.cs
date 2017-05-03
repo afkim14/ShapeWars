@@ -35,7 +35,7 @@ public class TurretsTroopMenu : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Instantiate(troops[0], new Vector2(-9.59f, 0.2f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Instantiate(troops[0], new Vector2(-10.59f, 0.2f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
         }
 	}
 
