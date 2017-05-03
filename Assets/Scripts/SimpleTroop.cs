@@ -10,7 +10,7 @@ public class SimpleTroop : Troop {
         maxHealth = 30;
         maxSpeed = 2;
         currHealth = maxHealth;
-        transform.localScale = new Vector3(0.1655172f, 0.1655172f, 0.1655172f);
+        transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);
         rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
 

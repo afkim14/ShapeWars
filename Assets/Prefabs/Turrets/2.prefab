@@ -392,7 +392,6 @@ MonoBehaviour:
   shootingPoint3ref: {fileID: 4804951715802266}
   shootingPoint4ref: {fileID: 4583861545919188}
   shootingPoint5ref: {fileID: 4371412815796740}
-  shootingPoints: []
   bullet: {fileID: 114721633985928848, guid: 907982f466e024f46841479c9a590ae7, type: 2}
 --- !u!212 &212560275252059860
 SpriteRenderer:

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameAdmin : MonoBehaviour {
 
@@ -8,8 +9,22 @@ public class GameAdmin : MonoBehaviour {
     public bool can_place_turret;
     public Turret curr_turret_held;
 
-	// Use this for initialization
-	void Start () {
+    // AttackingPlayer Info
+    public Text ap_name_text;
+    public Text ap_gold_text;
+    public Text ap_score_text;
+    public Text ap_troops_sent_text;
+    public Text ap_troops_killed_text;
+
+    // DefendingPlayer Info
+    public Text dp_name_text;
+    public Text dp_gold_text;
+    public Text dp_score_text;
+    public Text dp_turrets_built_text;
+    public Text dp_troops_killed_text;
+
+    // Use this for initialization
+    void Start () {
         holding_turret = false;
         can_place_turret = true;
         curr_turret_held = null;

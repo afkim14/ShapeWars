@@ -104,9 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ga: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e, type: 2}
-  turret0: {fileID: 114355748384089082, guid: 6db66b2064f100244bd8259daaf537c5, type: 2}
+  turret0: {fileID: 114185188579226144, guid: 6db66b2064f100244bd8259daaf537c5, type: 2}
   turret1: {fileID: 114410343732971404, guid: 15a15d1ecc0d4c740b8e3825fbf793c1, type: 2}
-  turret2: {fileID: 0}
+  turret2: {fileID: 114194836922916618, guid: f7679e4137a5b6748a66d1920138e1bc, type: 2}
+  troop0: {fileID: 114933770680719568, guid: c4b061aac61197a4a96e42fecbf54702, type: 2}
 --- !u!124 &124015352954274804
 Behaviour:
   m_ObjectHideFlags: 1

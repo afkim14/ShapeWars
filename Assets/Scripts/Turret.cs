@@ -14,7 +14,7 @@ public class Turret : MonoBehaviour {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
         gameObject.GetComponent<Collider2D>().isTrigger = true;
         placed = false;
-        transform.localScale = new Vector3(0.1655172f, 0.1655172f, 0.1655172f);
+        transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);
     }
 
     // Update is called once per frame
