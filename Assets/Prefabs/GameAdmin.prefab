@@ -41,6 +41,16 @@ MonoBehaviour:
   holding_turret: 0
   can_place_turret: 0
   curr_turret_held: {fileID: 0}
+  ap_name_text: {fileID: 0}
+  ap_gold_text: {fileID: 0}
+  ap_score_text: {fileID: 0}
+  ap_troops_sent_text: {fileID: 0}
+  ap_troops_killed_text: {fileID: 0}
+  dp_name_text: {fileID: 0}
+  dp_gold_text: {fileID: 0}
+  dp_score_text: {fileID: 0}
+  dp_turrets_built_text: {fileID: 0}
+  dp_troops_killed_text: {fileID: 0}
 --- !u!224 &224524930495532044
 RectTransform:
   m_ObjectHideFlags: 1

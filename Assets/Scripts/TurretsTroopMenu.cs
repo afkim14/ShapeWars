@@ -6,6 +6,7 @@ using UnityEngine;
 public class TurretsTroopMenu : MonoBehaviour {
 
     public GameAdmin ga;
+    public Transform troopEntryPoint;
     private Turret[] turrets;
     private Troop[] troops;
     private int num_of_turrets = 11;
@@ -35,7 +36,7 @@ public class TurretsTroopMenu : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Instantiate(troops[0], new Vector2(-10.59f, 0.2f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Instantiate(troops[0], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
         }
 	}
 

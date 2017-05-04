@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameAdmin : MonoBehaviour {
 
@@ -32,6 +33,10 @@ public class GameAdmin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 2);
+        }
 
-	}
+    }
 }
