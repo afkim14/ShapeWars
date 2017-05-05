@@ -33,10 +33,6 @@ public class GameAdmin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 2);
-        }
 
     }
 }

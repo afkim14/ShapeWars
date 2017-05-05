@@ -18,8 +18,8 @@ public class SpiralTurret : Turret {
     private Transform[] shootingPointsRef;
     public Bullet bullet;
     private float bulletTime;
-    private int bulletSpeed = 8;
-    private float shootInterval = 1.5f;
+    private int bulletSpeed = 30;
+    private float shootInterval = 0.5f;
     private int rotation = 0;
 	
 	// Update is called once per frame
@@ -33,15 +33,23 @@ public class SpiralTurret : Turret {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
 
             // shoot
-            bulletTime += Time.deltaTime;
-            if (bulletTime >= shootInterval)
+            if (GameObject.FindGameObjectWithTag("Troop") != null)
             {
-                for (int i = 0; i < 5; i++)
+                if (troop_in_range)
                 {
-                    Vector2 direction = shootingPointsRef[i].position - shootingPoints[i].position;
-                    Bullet bulletClone = Instantiate(bullet, shootingPoints[i].transform.position, shootingPoints[i].transform.rotation);
-                    bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-                    bulletTime = 0.0f;
+                    bulletTime += Time.deltaTime;
+                    if (bulletTime >= shootInterval)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Vector2 direction = shootingPointsRef[i].position - shootingPoints[i].position;
+                            Bullet bulletClone = Instantiate(bullet, shootingPoints[i].transform.position, shootingPoints[i].transform.rotation);
+                            bulletClone.maxBulletTime = 1.0f;
+                            bulletClone.dmg = 5;
+                            bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+                            bulletTime = 0.0f;
+                        }
+                    }
                 }
             }
         }

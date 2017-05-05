@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public float bulletTime;
     public float maxBulletTime = 2.0f;
-    private float maxSpeed = 5.0f;
+    public int dmg = 1;
 
     // Use this for initialization
     void Start () {
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour {
     {
         if (col.CompareTag("Troop"))
         {
-            col.GetComponent<Troop>().Damage(1);
+            col.GetComponent<Troop>().Damage(dmg);
             Destroy(gameObject);
         }
     }

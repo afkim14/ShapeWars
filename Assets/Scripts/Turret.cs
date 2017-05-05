@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour {
     public GameAdmin ga;
     public bool placed;
     public Vector3 placed_pos;
+    public bool troop_in_range;
 
     // Use this for initialization
     void Start()
@@ -14,6 +15,7 @@ public class Turret : MonoBehaviour {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
         gameObject.GetComponent<Collider2D>().isTrigger = true;
         placed = false;
+        troop_in_range = false;
         transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);
     }
 

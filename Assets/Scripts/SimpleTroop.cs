@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SimpleTroop : Troop {
 
+    private Vector3 direction;
+
     // Use this for initialization
     void Start()
     {
@@ -13,16 +15,21 @@ public class SimpleTroop : Troop {
         currHealth = maxHealth;
         transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-    }
 
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            direction = new Vector3(0, -1, 0);
+        }
+
+    }
     // Update is called once per frame
     void Update () {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            rb2d.AddForce((Vector2.right * 2.0f));
+            transform.Translate(direction * Time.deltaTime * 2);
         } else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            rb2d.AddForce((Vector2.down * 2.0f));
+            //rb2d.AddForce((Vector2.right * 2.0f));
         }
     }
 
@@ -46,6 +53,29 @@ public class SimpleTroop : Troop {
         if (rb2d.velocity.y < -maxSpeed)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, -maxSpeed);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("WallDownLeft"))
+        {
+            direction = new Vector3(-1, 0, 0);
+        } else if (col.CompareTag("WallLeftDown"))
+        {
+            direction = new Vector3(0, -1, 0);
+        } else if (col.CompareTag("WallDownRight"))
+        {
+            direction = new Vector3(1, 0, 0);
+        } else if (col.CompareTag("WallRightUp"))
+        {
+            direction = new Vector3(0, 1, 0);
+        } else if (col.CompareTag("WallUpRight"))
+        {
+            direction = new Vector3(1, 0, 0);
+        } else if (col.CompareTag("WallRightDown"))
+        {
+            direction = new Vector3(0, -1, 0);
         }
     }
 }

@@ -7,6 +7,13 @@ TagManager:
   - GameAdmin
   - Turret
   - Troop
+  - TurretArea
+  - WallDownLeft
+  - WallLeftDown
+  - WallDownRight
+  - WallRightUp
+  - WallUpRight
+  - WallRightDown
   layers:
   - Default
   - TransparentFX
