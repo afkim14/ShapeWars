@@ -1919,7 +1919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &326087327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10806,6 +10806,56 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: ap_name_text
+      value: 
+      objectReference: {fileID: 1994137104}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: ap_gold_text
+      value: 
+      objectReference: {fileID: 630137929}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: ap_score_text
+      value: 
+      objectReference: {fileID: 20212725}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: ap_troops_sent_text
+      value: 
+      objectReference: {fileID: 1904904052}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: ap_troops_killed_text
+      value: 
+      objectReference: {fileID: 1668681416}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: dp_name_text
+      value: 
+      objectReference: {fileID: 942362236}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: dp_gold_text
+      value: 
+      objectReference: {fileID: 1805074162}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: dp_score_text
+      value: 
+      objectReference: {fileID: 1552934850}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: dp_turrets_built_text
+      value: 
+      objectReference: {fileID: 2094310420}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: dp_troops_killed_text
+      value: 
+      objectReference: {fileID: 905757292}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 699d92eb63e8c4c409af4f34d9a2700e, type: 2}
   m_IsPrefabParent: 0

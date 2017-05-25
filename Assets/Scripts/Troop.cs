@@ -14,6 +14,9 @@ public class Troop : MonoBehaviour {
         if (currHealth - dmg <= 0)
         {
             Destroy(gameObject);
+            PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed")+1);
+            PlayerPrefs.SetInt("dp_score", PlayerPrefs.GetInt("dp_score") + 100);
+            PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 50);
         }
 
         currHealth -= dmg;

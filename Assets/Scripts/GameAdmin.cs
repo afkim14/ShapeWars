@@ -33,6 +33,16 @@ public class GameAdmin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        ap_name_text.text = "Junwon";
+        ap_gold_text.text = "Gold: " + PlayerPrefs.GetInt("ap_money");
+        ap_score_text.text = "Score: " + PlayerPrefs.GetInt("ap_score");
+        ap_troops_sent_text.text = "Troops Sent: " + PlayerPrefs.GetInt("troops_sent");
+        ap_troops_killed_text.text = "Troops Killed: " + PlayerPrefs.GetInt("troops_killed");
 
+        dp_name_text.text = "Austin";
+        dp_gold_text.text = "Gold: " + PlayerPrefs.GetInt("dp_money");
+        dp_score_text.text = "Score: " + PlayerPrefs.GetInt("dp_score");
+        dp_turrets_built_text.text = "Turrets Built: " + PlayerPrefs.GetInt("turrets_built");
+        dp_troops_killed_text.text = "Troops Killed: " + PlayerPrefs.GetInt("troops_killed");
     }
 }

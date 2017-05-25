@@ -37,6 +37,7 @@ public class TurretsTroopMenu : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Instantiate(troops[0], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
+            PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt("troops_sent") + 1);
         }
 	}
 

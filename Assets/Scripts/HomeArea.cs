@@ -17,7 +17,9 @@ public class HomeArea : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Troop"))
-        {      
+        {
+            PlayerPrefs.SetInt("ap_score", PlayerPrefs.GetInt("ap_score") + 200);
+            PlayerPrefs.SetInt("ap_money", PlayerPrefs.GetInt("ap_money") + 100);
             Destroy(col.gameObject);
         }
     }
