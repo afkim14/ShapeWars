@@ -13,12 +13,12 @@ public class TurretAttackRange : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Troop"))
         {
-            gameObject.GetComponentInParent<Turret>().troop_in_range = true;
+            gameObject.GetComponentInParent<Turret>().currentCollisions.Add(col.gameObject.GetComponent<Troop>());
         }
     }
 
@@ -26,7 +26,7 @@ public class TurretAttackRange : MonoBehaviour {
     {
         if (col.CompareTag("Troop"))
         {
-            gameObject.GetComponentInParent<Turret>().troop_in_range = false;
+            gameObject.GetComponentInParent<Turret>().currentCollisions.Remove(col.gameObject.GetComponent<Troop>());
         }
     }
 }

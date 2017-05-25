@@ -8,6 +8,7 @@ public class Turret : MonoBehaviour {
     public bool placed;
     public Vector3 placed_pos;
     public bool troop_in_range;
+    public List<Troop> currentCollisions = new List<Troop>();
 
     // Use this for initialization
     void Start()
@@ -31,6 +32,15 @@ public class Turret : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Turret"))
+        {
+            ga.can_place_turret = false;
+            // show somehow that turret cannot be placed
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
     {
         if (col.CompareTag("Turret"))
         {

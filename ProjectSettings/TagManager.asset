@@ -14,6 +14,8 @@ TagManager:
   - WallRightUp
   - WallUpRight
   - WallRightDown
+  - WallLeftUp
+  - WallUpLeft
   layers:
   - Default
   - TransparentFX

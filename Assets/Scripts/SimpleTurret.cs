@@ -7,28 +7,31 @@ public class SimpleTurret : Turret {
     public Transform shootingPoint;
     public Bullet bullet;
     public Transform target;
-    private int bulletSpeed = 2;
+    private int bulletSpeed = 4;
     private float shootTime;
-    private float shootInterval = 0.5f;
+    private float shootInterval = 0.3f;
 
-    // Update is called once per frame
-    void Update () {
+// Update is called once per frame
+void Update () {
 		if (placed)
         {
-            if (GameObject.FindGameObjectWithTag("Troop") != null)
+            if (currentCollisions.Count > 0)
             {
-                if (troop_in_range)
+                Troop enemy = currentCollisions[0];
+                if (enemy.currHealth > 0)
                 {
-                    //shootTime += Time.deltaTime;
-                    //if (shootTime >= shootInterval)
-                    //{
-                    target = GameObject.FindGameObjectWithTag("Troop").gameObject.transform;
-                    Vector2 direction = target.transform.position - transform.position;
-                    Bullet bulletClone;
-                    bulletClone = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
-                    bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-                    shootTime = 0.0f;
-                    //}
+                    shootTime += Time.deltaTime;
+                    if (shootTime >= shootInterval)
+                    {
+                        Vector2 direction = enemy.transform.position - transform.position;
+                        Bullet bulletClone;
+                        bulletClone = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
+                        bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+                        shootTime = 0.0f;
+                    }
+                } else
+                {
+                    currentCollisions.RemoveAt(0);
                 }
             }
         }
