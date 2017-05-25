@@ -10,7 +10,7 @@ public class SimpleTroop : Troop {
     // Use this for initialization
     void Start()
     {
-        maxHealth = 30;
+        maxHealth = 7;
         maxSpeed = 2;
         currHealth = maxHealth;
         transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);

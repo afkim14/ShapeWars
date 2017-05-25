@@ -24,11 +24,17 @@ public class GameAdmin : MonoBehaviour {
     public Text dp_turrets_built_text;
     public Text dp_troops_killed_text;
 
+    //
+    private bool gameOver;
+    public GameObject gameOverMenu;
+
     // Use this for initialization
     void Start () {
         holding_turret = false;
         can_place_turret = true;
         curr_turret_held = null;
+        gameOver = false;
+		//gameOverText.text = "";
 	}
 	
 	// Update is called once per frame
@@ -44,5 +50,20 @@ public class GameAdmin : MonoBehaviour {
         dp_score_text.text = "Score: " + PlayerPrefs.GetInt("dp_score");
         dp_turrets_built_text.text = "Turrets Built: " + PlayerPrefs.GetInt("turrets_built");
         dp_troops_killed_text.text = "Troops Killed: " + PlayerPrefs.GetInt("troops_killed");
+
+        if (PlayerPrefs.GetInt("ap_score") >= 5) {
+            End("attacker");
+        }
+
+		if (PlayerPrefs.GetInt("dp_score") >= 5) {
+			End("defender");
+		}
+    }
+
+    void End (string winner) {
+        gameOver = true;
+		gameOverMenu.SetActive(true);
+		Text endGameText = gameOverMenu.GetComponentInChildren<Text> ();
+		endGameText.text = winner + " wins";
     }
 }

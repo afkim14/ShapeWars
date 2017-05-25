@@ -11395,6 +11395,11 @@ Prefab:
       propertyPath: dp_troops_killed_text
       value: 
       objectReference: {fileID: 905757292}
+    - target: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e,
+        type: 2}
+      propertyPath: gameOverMenu
+      value: 
+      objectReference: {fileID: 33008777}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 699d92eb63e8c4c409af4f34d9a2700e, type: 2}
   m_IsPrefabParent: 0
