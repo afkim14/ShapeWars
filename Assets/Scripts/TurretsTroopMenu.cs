@@ -51,6 +51,7 @@ public class TurretsTroopMenu : MonoBehaviour {
 
             Vector2 buttonpos = EventSystem.current.currentSelectedGameObject.transform.position;
             Turret t = Instantiate(turret, buttonpos, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            PlayerPrefs.SetInt("turrets_built", PlayerPrefs.GetInt("turrets_built") + 1);
 
             // tell admin you are holding this turret
             ga.holding_turret = true;

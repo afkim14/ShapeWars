@@ -33,9 +33,9 @@ public class SpiralTurret : Turret {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
 
             // shoot
-            if (GameObject.FindGameObjectWithTag("Troop") != null)
+            if (placed)
             {
-                if (troop_in_range)
+                if (currentCollisions.Count > 0)
                 {
                     bulletTime += Time.deltaTime;
                     if (bulletTime >= shootInterval)
