@@ -17,6 +17,7 @@ public class TurretsTroopMenu : MonoBehaviour {
     public Turret turret2;
 
     public Troop troop0;
+	public Troop troop1;
 
     // Use this for initialization
     void Start () {
@@ -30,6 +31,7 @@ public class TurretsTroopMenu : MonoBehaviour {
         turrets[2] = turret2;
 
         troops[0] = troop0;
+		troops[1] = troop1;
     }
 	
 	// Update is called once per frame
@@ -38,7 +40,10 @@ public class TurretsTroopMenu : MonoBehaviour {
         {
             Instantiate(troops[0], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
             PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt("troops_sent") + 1);
-        }
+		} else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+			Instantiate(troops[1], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
+			PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt ("troops_sent") + 1);
+		}
 	}
 
     public void CreateTurret()
