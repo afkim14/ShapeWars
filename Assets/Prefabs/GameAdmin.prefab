@@ -51,7 +51,12 @@ MonoBehaviour:
   dp_score_text: {fileID: 0}
   dp_turrets_built_text: {fileID: 0}
   dp_troops_killed_text: {fileID: 0}
+  timer_text: {fileID: 0}
+  gameTimer: 0
+  currentGameTime: 0
+  gameTimerInterval: 1
   gameOverMenu: {fileID: 0}
+  destroySelectsLeft: 0
 --- !u!224 &224524930495532044
 RectTransform:
   m_ObjectHideFlags: 1
