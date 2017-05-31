@@ -94,7 +94,8 @@ MonoBehaviour:
   currSpeed: 0
   direction: {x: 0, y: 0, z: 0}
   minSpeed: 0.5
-  deathParticle: {fileID: 0}
+  deathParticle: {fileID: 1721445755098936, guid: d57b8dc0c8aea2e48b979554dbe6ca4f,
+    type: 2}
 --- !u!212 &212571786135334188
 SpriteRenderer:
   m_ObjectHideFlags: 1

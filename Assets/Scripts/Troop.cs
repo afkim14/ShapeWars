@@ -12,6 +12,7 @@ public class Troop : MonoBehaviour {
     public Vector3 direction;
     public float minSpeed = 0.5f;
     public GameObject deathParticle;
+    private GameAdmin ga;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -40,6 +41,7 @@ public class Troop : MonoBehaviour {
     {
         if (currHealth - dmg <= 0)
         {
+            // delete it from active troops
             Instantiate(deathParticle, transform.position, transform.rotation);
             Destroy(gameObject);
             PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed")+1);
@@ -75,6 +77,16 @@ public class Troop : MonoBehaviour {
                 direction.y = y + slow_factor;
                 if (direction.y > -minSpeed) { direction.y = -minSpeed; }
             }
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
+        if (ga.destroySelectsLeft > 0)
+        {
+            Destroy(gameObject);
+            ga.destroySelectsLeft--;
         }
     }
 }

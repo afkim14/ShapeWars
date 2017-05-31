@@ -25,11 +25,14 @@ public class GameAdmin : MonoBehaviour {
     public Text dp_troops_killed_text;
 
     //
+    public Text timer_text;
     public int gameTimer;
     public float currentGameTime;
-    public float gameTimerInterval = 10.0f;
+    public float gameTimerInterval = 1.0f;
     private bool gameOver;
     public GameObject gameOverMenu;
+
+    public int destroySelectsLeft;
 
     // Use this for initialization
     void Start () {
@@ -37,8 +40,11 @@ public class GameAdmin : MonoBehaviour {
         can_place_turret = true;
         curr_turret_held = null;
         gameOver = false;
-        gameTimer = 1000;
-		//gameOverText.text = "";
+        gameTimer = 360;
+        timer_text.text = gameTimer.ToString();
+        //gameOverText.text = "";
+
+        destroySelectsLeft = 5;
 	}
 	
 	// Update is called once per frame
@@ -55,14 +61,18 @@ public class GameAdmin : MonoBehaviour {
         dp_turrets_built_text.text = "Turrets Built: " + PlayerPrefs.GetInt("turrets_built");
         dp_troops_killed_text.text = "Troops Killed: " + PlayerPrefs.GetInt("troops_killed");
 
+        string minutes = ((int)(gameTimer / 60)).ToString();
+        int seconds = (int)(gameTimer % 60);
+        string seconds_s = ((int)(gameTimer % 60)).ToString();
+        if (seconds_s.Length == 1) { seconds_s = "0" + seconds_s; }
+        timer_text.text = minutes + ":" + seconds_s;
         currentGameTime += Time.deltaTime;
         if (currentGameTime >= gameTimerInterval) {
-            print(gameTimer);
             gameTimer -= 1;
             currentGameTime = 0.0f;
         }
 
-        if (gameTimer == 0) {
+        if (timer_text.text == "0:00") {
             if (PlayerPrefs.GetInt("ap_score") == PlayerPrefs.GetInt("dp_score")) {
                 End("no one");
             }
