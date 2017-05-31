@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 124015352954274804}
   - component: {fileID: 81613214607905968}
   - component: {fileID: 114903855914339272}
+  - component: {fileID: 114210607451250872}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -121,6 +122,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1563983619202550}
   m_Enabled: 1
+--- !u!114 &114210607451250872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563983619202550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de18e391682e2a14c86b6327fee9bb32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseUI: {fileID: 0}
 --- !u!114 &114903855914339272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,9 +148,11 @@ MonoBehaviour:
   ga: {fileID: 114774850739731972, guid: 699d92eb63e8c4c409af4f34d9a2700e, type: 2}
   troopEntryPoint: {fileID: 4049365110816188}
   turret0: {fileID: 114185188579226144, guid: 6db66b2064f100244bd8259daaf537c5, type: 2}
-  turret1: {fileID: 114410343732971404, guid: 15a15d1ecc0d4c740b8e3825fbf793c1, type: 2}
+  turret1: {fileID: 114045137843300754, guid: 15a15d1ecc0d4c740b8e3825fbf793c1, type: 2}
   turret2: {fileID: 114194836922916618, guid: f7679e4137a5b6748a66d1920138e1bc, type: 2}
+  turret3: {fileID: 114010152562408608, guid: 01ad5eea560ad104cb5c3217ec194ff1, type: 2}
   troop0: {fileID: 114933770680719568, guid: c4b061aac61197a4a96e42fecbf54702, type: 2}
+  troop3: {fileID: 114751365574669720, guid: b88d943cafd48074bb6a436f16e42af7, type: 2}
 --- !u!124 &124015352954274804
 Behaviour:
   m_ObjectHideFlags: 1

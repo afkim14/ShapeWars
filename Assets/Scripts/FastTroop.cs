@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class FastTroop : Troop {
 
-	private Vector3 direction;
-
 	// Use this for initialization
 	void Start () {
 		maxHealth = 3;
-		maxSpeed = 10;
 		currHealth = maxHealth;
-		transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);
+		transform.localScale = new Vector3(0.1055172f, 0.1055172f, 0.1055172f);
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
 
 		if (SceneManager.GetActiveScene().buildIndex == 1)

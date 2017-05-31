@@ -37,6 +37,8 @@ public class SpiralTurret : Turret {
             {
                 if (currentCollisions.Count > 0)
                 {
+                    // check if troop's not dead
+                    for (int j = 0; j < currentCollisions.Count; j++) { if (currentCollisions[j].currHealth <= 0) { currentCollisions.Remove(currentCollisions[j]); } }
                     bulletTime += Time.deltaTime;
                     if (bulletTime >= shootInterval)
                     {

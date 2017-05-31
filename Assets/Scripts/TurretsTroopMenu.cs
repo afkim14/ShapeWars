@@ -15,9 +15,11 @@ public class TurretsTroopMenu : MonoBehaviour {
     public Turret turret0;
     public Turret turret1;
     public Turret turret2;
+    public Turret turret3;
 
     public Troop troop0;
 	public Troop troop1;
+    public Troop troop3;
 
     // Use this for initialization
     void Start () {
@@ -29,13 +31,16 @@ public class TurretsTroopMenu : MonoBehaviour {
         turrets[0] = turret0;
         turrets[1] = turret1;
         turrets[2] = turret2;
+        turrets[3] = turret3;
 
         troops[0] = troop0;
 		troops[1] = troop1;
+        troops[3] = troop3;
     }
 	
 	// Update is called once per frame
 	void Update () {
+        // creating turrets
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Instantiate(troops[0], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
@@ -43,7 +48,26 @@ public class TurretsTroopMenu : MonoBehaviour {
 		} else if (Input.GetKeyDown(KeyCode.Alpha2)) {
 			Instantiate(troops[1], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
 			PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt ("troops_sent") + 1);
-		}
+        } else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Instantiate(troops[3], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
+            PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt("troops_sent") + 1);
+        }
+
+        // flipping turrets
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (ga.holding_turret)
+            {
+                if (ga.curr_turret_held.transform.rotation.z == 0)
+                {
+                    ga.curr_turret_held.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+                } else
+                {
+                    ga.curr_turret_held.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                }
+            }
+        }
 	}
 
     public void CreateTurret()
@@ -56,7 +80,6 @@ public class TurretsTroopMenu : MonoBehaviour {
 
             Vector2 buttonpos = EventSystem.current.currentSelectedGameObject.transform.position;
             Turret t = Instantiate(turret, buttonpos, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
-            PlayerPrefs.SetInt("turrets_built", PlayerPrefs.GetInt("turrets_built") + 1);
 
             // tell admin you are holding this turret
             ga.holding_turret = true;
@@ -76,6 +99,7 @@ public class TurretsTroopMenu : MonoBehaviour {
             if (ga.can_place_turret)
             {
                 // fix the turret in place
+                PlayerPrefs.SetInt("turrets_built", PlayerPrefs.GetInt("turrets_built") + 1);
                 ga.curr_turret_held.placed = true;
                 Vector3 pos = Input.mousePosition;
                 pos.z = transform.position.z - Camera.main.transform.position.z;

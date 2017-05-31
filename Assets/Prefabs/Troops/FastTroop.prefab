@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4925602072342658}
   - component: {fileID: 212571786135334188}
-  - component: {fileID: 61206077825796800}
   - component: {fileID: 50733502925787466}
   - component: {fileID: 114161927868107860}
+  - component: {fileID: 58859809502195392}
   m_Layer: 0
   m_Name: FastTroop
   m_TagString: Troop
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61206077825796800
-BoxCollider2D:
+--- !u!58 &58859809502195392
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,7 +76,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Radius: 4
 --- !u!114 &114161927868107860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,9 +89,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  maxSpeed: 0
   maxHealth: 0
   currHealth: 0
+  currSpeed: 0
+  direction: {x: 0, y: 0, z: 0}
+  minSpeed: 0.5
+  deathParticle: {fileID: 0}
 --- !u!212 &212571786135334188
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -122,8 +125,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5be5e631f223e0a409c6791610647fe4, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 89996afdcd164bb449c440c2c30f4898, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

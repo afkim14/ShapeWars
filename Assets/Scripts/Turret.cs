@@ -37,6 +37,9 @@ public class Turret : MonoBehaviour {
         {
             ga.can_place_turret = false;
             // show somehow that turret cannot be placed
+        } else
+        {
+            ga.can_place_turret = true;
         }
     }
 
@@ -46,6 +49,9 @@ public class Turret : MonoBehaviour {
         {
             ga.can_place_turret = false;
             // show somehow that turret cannot be placed
+        } else
+        {
+            ga.can_place_turret = true;
         }
     }
 

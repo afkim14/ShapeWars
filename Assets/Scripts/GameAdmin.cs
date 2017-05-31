@@ -51,13 +51,13 @@ public class GameAdmin : MonoBehaviour {
         dp_turrets_built_text.text = "Turrets Built: " + PlayerPrefs.GetInt("turrets_built");
         dp_troops_killed_text.text = "Troops Killed: " + PlayerPrefs.GetInt("troops_killed");
 
-        if (PlayerPrefs.GetInt("ap_score") >= 1000) {
-            End("attacker");
-        }
+        //if (PlayerPrefs.GetInt("ap_score") >= 5) {
+        //    End("attacker");
+        //}
 
-		if (PlayerPrefs.GetInt("dp_score") >= 1000) {
-			End("defender");
-		}
+		//if (PlayerPrefs.GetInt("dp_score") >= 5) {
+		//	End("defender");
+		//}
     }
 
     void End (string winner) {

@@ -11,8 +11,8 @@ public class SimpleTurret : Turret {
     private float shootTime;
     private float shootInterval = 0.3f;
 
-// Update is called once per frame
-void Update () {
+    // Update is called once per frame
+    void Update () {
 		if (placed)
         {
             if (currentCollisions.Count > 0)

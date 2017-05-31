@@ -89,9 +89,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  maxSpeed: 0
   maxHealth: 0
   currHealth: 0
+  currSpeed: 0
+  direction: {x: 0, y: 0, z: 0}
+  minSpeed: 0.5
+  deathParticle: {fileID: 1721445755098936, guid: d57b8dc0c8aea2e48b979554dbe6ca4f,
+    type: 2}
 --- !u!212 &212428902118201538
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -51,6 +51,7 @@ MonoBehaviour:
   dp_score_text: {fileID: 0}
   dp_turrets_built_text: {fileID: 0}
   dp_troops_killed_text: {fileID: 0}
+  gameOverMenu: {fileID: 0}
 --- !u!224 &224524930495532044
 RectTransform:
   m_ObjectHideFlags: 1

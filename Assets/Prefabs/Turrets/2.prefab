@@ -428,6 +428,7 @@ MonoBehaviour:
   placed: 0
   placed_pos: {x: 0, y: 0, z: 0}
   troop_in_range: 0
+  currentCollisions: []
   shootingPoint1: {fileID: 4777801161309938}
   shootingPoint2: {fileID: 4630805142511752}
   shootingPoint3: {fileID: 4637800886369438}
@@ -438,7 +439,7 @@ MonoBehaviour:
   shootingPoint3ref: {fileID: 4804951715802266}
   shootingPoint4ref: {fileID: 4583861545919188}
   shootingPoint5ref: {fileID: 4371412815796740}
-  bullet: {fileID: 114721633985928848, guid: 907982f466e024f46841479c9a590ae7, type: 2}
+  bullet: {fileID: 114594017643282198, guid: 907982f466e024f46841479c9a590ae7, type: 2}
 --- !u!114 &114873579555298140
 MonoBehaviour:
   m_ObjectHideFlags: 1
