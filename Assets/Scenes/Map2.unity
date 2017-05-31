@@ -4429,6 +4429,12 @@ Prefab:
       value: 
       objectReference: {fileID: 114161927868107860, guid: e9a3d160fa1994b49ad16970046b2778,
         type: 2}
+    - target: {fileID: 114903855914339272, guid: 9a958e1ed68c44c4c9b52985558916b1,
+        type: 2}
+      propertyPath: troop2
+      value: 
+      objectReference: {fileID: 114276095349175072, guid: 90e7dd6dd8e554b13ac28e95ed47e2be,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a958e1ed68c44c4c9b52985558916b1, type: 2}
   m_IsPrefabParent: 0

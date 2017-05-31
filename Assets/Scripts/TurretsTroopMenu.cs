@@ -22,6 +22,9 @@ public class TurretsTroopMenu : MonoBehaviour {
     public Troop troop2;
     public Troop troop3;
 
+	int[] spawnIntervals = {100, 200, 300, 400};
+	int[] currIntervals = { 100, 100, 100, 100 };
+
     // Use this for initialization
     void Start () {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
@@ -43,19 +46,23 @@ public class TurretsTroopMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // creating turrets
-		if (Input.GetKeyDown(KeyCode.Alpha1))
+		if ((Input.GetKeyDown(KeyCode.Alpha1)) && (currIntervals[0] == spawnIntervals[0]))
         {
+			currIntervals[0] = 0;
             Instantiate(troops[0], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
             PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt("troops_sent") + 1);
-		} else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+		} else if ((Input.GetKeyDown(KeyCode.Alpha2)) && (currIntervals[1] == spawnIntervals[1])) {
+			currIntervals[1] = 0;
 			Instantiate(troops[1], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
 			PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt ("troops_sent") + 1);
-        } else if (Input.GetKeyDown(KeyCode.Alpha3))
+		} else if ((Input.GetKeyDown(KeyCode.Alpha3)) && (currIntervals[2] == spawnIntervals[2]))
         {
+			currIntervals[2] = 0;
             Instantiate(troops[2], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
             PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt("troops_sent") + 1);
-        } else if (Input.GetKeyDown(KeyCode.Alpha4))
+		} else if ((Input.GetKeyDown(KeyCode.Alpha4)) && (currIntervals[3] == spawnIntervals[3]))
         {
+			currIntervals[3] = 0;
             Instantiate(troops[3], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
             PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt("troops_sent") + 1);
         }
@@ -74,6 +81,11 @@ public class TurretsTroopMenu : MonoBehaviour {
                 }
             }
         }
+		for (int i = 0; i < 4; i++) {
+			if (currIntervals [i] != spawnIntervals[i]) {
+				currIntervals [i] = currIntervals [i] + 1;
+			}
+		}
 	}
 
     public void CreateTurret()
