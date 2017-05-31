@@ -19,6 +19,7 @@ public class TurretsTroopMenu : MonoBehaviour {
 
     public Troop troop0;
 	public Troop troop1;
+    public Troop troop2;
     public Troop troop3;
 
     // Use this for initialization
@@ -35,6 +36,7 @@ public class TurretsTroopMenu : MonoBehaviour {
 
         troops[0] = troop0;
 		troops[1] = troop1;
+        troops[2] = troop2;
         troops[3] = troop3;
     }
 	
@@ -48,6 +50,10 @@ public class TurretsTroopMenu : MonoBehaviour {
 		} else if (Input.GetKeyDown(KeyCode.Alpha2)) {
 			Instantiate(troops[1], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
 			PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt ("troops_sent") + 1);
+        } else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Instantiate(troops[2], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
+            PlayerPrefs.SetInt("troops_sent", PlayerPrefs.GetInt("troops_sent") + 1);
         } else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             Instantiate(troops[3], new Vector2(troopEntryPoint.position.x, troopEntryPoint.position.y), troopEntryPoint.rotation);
