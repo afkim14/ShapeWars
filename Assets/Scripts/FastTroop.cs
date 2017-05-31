@@ -25,21 +25,4 @@ public class FastTroop : Troop {
 			transform.Translate(direction * Time.deltaTime * 3);
 		}
 	}
-		
-	private void OnTriggerEnter2D(Collider2D col)
-	{
-		if ((col.CompareTag("WallDownLeft")) || (col.CompareTag("WallUpLeft")))
-		{
-			direction = new Vector3(-1, 0, 0);
-		} else if ((col.CompareTag("WallLeftDown")) || (col.CompareTag("WallRightDown")))
-		{
-			direction = new Vector3(0, -1, 0);
-		} else if ((col.CompareTag("WallDownRight")) || (col.CompareTag("WallUpRight")))
-		{
-			direction = new Vector3(1, 0, 0);
-		} else if ((col.CompareTag("WallRightUp")) || (col.CompareTag("WallLeftUp")))
-		{
-			direction = new Vector3(0, 1, 0);
-		}
-	}
 }
