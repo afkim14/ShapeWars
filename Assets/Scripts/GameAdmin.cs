@@ -25,6 +25,9 @@ public class GameAdmin : MonoBehaviour {
     public Text dp_troops_killed_text;
 
     //
+    public int gameTimer;
+    public float currentGameTime;
+    public float gameTimerInterval = 10.0f;
     private bool gameOver;
     public GameObject gameOverMenu;
 
@@ -34,6 +37,7 @@ public class GameAdmin : MonoBehaviour {
         can_place_turret = true;
         curr_turret_held = null;
         gameOver = false;
+        gameTimer = 1000;
 		//gameOverText.text = "";
 	}
 	
@@ -51,6 +55,24 @@ public class GameAdmin : MonoBehaviour {
         dp_turrets_built_text.text = "Turrets Built: " + PlayerPrefs.GetInt("turrets_built");
         dp_troops_killed_text.text = "Troops Killed: " + PlayerPrefs.GetInt("troops_killed");
 
+        currentGameTime += Time.deltaTime;
+        if (currentGameTime >= gameTimerInterval) {
+            print(gameTimer);
+            gameTimer -= 1;
+            currentGameTime = 0.0f;
+        }
+
+        if (gameTimer == 0) {
+            if (PlayerPrefs.GetInt("ap_score") == PlayerPrefs.GetInt("dp_score")) {
+                End("no one");
+            }
+            if (PlayerPrefs.GetInt("ap_score") < PlayerPrefs.GetInt("dp_score")) {
+                End("attacker");
+            }
+            if (PlayerPrefs.GetInt("ap_score") > PlayerPrefs.GetInt("dp_score")) {
+                End("defender");
+            }
+        }
         //if (PlayerPrefs.GetInt("ap_score") >= 5) {
         //    End("attacker");
         //}
