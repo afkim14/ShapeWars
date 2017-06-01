@@ -61,7 +61,7 @@ public class ContainerTroop : Troop {
         }
     }
 
-    public override void Damage(int dmg)
+    public override void Damage(float dmg)
     {
         if (currHealth - dmg <= 0)
         {

@@ -60,7 +60,7 @@ public class GameAdmin : MonoBehaviour {
         timer_text.text = gameTimer.ToString();
         deadTroops = new List<TroopCopy>();
 
-        troop_costs = new int[] { 200, 400, 400, 1000, 2000, 1500 };
+        troop_costs = new int[] { 100, 200, 200, 500, 1000, 750 };
         turret_costs = new int[] { 500, 1500, 800, 1800, 2500 };
 
     destroySelectsLeft = totalDestroySelects;

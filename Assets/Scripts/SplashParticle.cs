@@ -13,7 +13,7 @@ public class SplashParticle : MonoBehaviour {
         if (other.CompareTag("Troop"))
         {
             Troop enemy = other.GetComponent<Troop>();
-            enemy.Damage(1);
+            enemy.Damage(0.1f);
         }
     }
 

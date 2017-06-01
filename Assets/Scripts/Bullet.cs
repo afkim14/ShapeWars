@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour {
     public Turret bulletSender;
     public float bulletTime;
     public float maxBulletTime;
-    public int dmg;
+    public float dmg;
 
     // Use this for initialization
     void Start () {

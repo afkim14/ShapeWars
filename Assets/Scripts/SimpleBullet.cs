@@ -7,7 +7,7 @@ public class SimpleBullet : Bullet {
     // Use this for initialization
     void Start()
     {
-        dmg = 1;
+        dmg = 1.0f;
         maxBulletTime = 2.0f;
         transform.localScale = new Vector3(0.1855172f, 0.1855172f, 0.1855172f);
     }

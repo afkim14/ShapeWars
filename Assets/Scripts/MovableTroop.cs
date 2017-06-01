@@ -17,7 +17,7 @@ public class MovableTroop : Troop
         cost = ga.troop_costs[4];
     }
 
-    public override void Damage(int dmg)
+    public override void Damage(float dmg)
     {
         if (currHealth - dmg <= 0)
         {

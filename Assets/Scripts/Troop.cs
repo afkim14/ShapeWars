@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class Troop : MonoBehaviour {
 
     public Rigidbody2D rb2d;
-    public int maxHealth;
-    public int currHealth;
+    public float maxHealth;
+    public float currHealth;
     public float currSpeed;
     public Vector3 direction;
     public float minSpeed = 0.5f;
@@ -74,7 +74,7 @@ public class Troop : MonoBehaviour {
         }
     }
 
-    public virtual void Damage(int dmg)
+    public virtual void Damage(float dmg)
     {
         if (currHealth - dmg <= 0)
         {
