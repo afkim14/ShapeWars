@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delete5Troops_button: {fileID: 0}
+  freezeTroops_button: {fileID: 0}
 --- !u!114 &114903855914339272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,10 +165,30 @@ MonoBehaviour:
   turret1: {fileID: 114045137843300754, guid: 15a15d1ecc0d4c740b8e3825fbf793c1, type: 2}
   turret2: {fileID: 114194836922916618, guid: f7679e4137a5b6748a66d1920138e1bc, type: 2}
   turret3: {fileID: 114010152562408608, guid: 01ad5eea560ad104cb5c3217ec194ff1, type: 2}
+  turret4: {fileID: 114904543566581816, guid: 347ff056fce753d409e69b90ca0405c6, type: 2}
+  turret0_button: {fileID: 0}
+  turret1_button: {fileID: 0}
+  turret2_button: {fileID: 0}
+  turret3_button: {fileID: 0}
+  turret4_button: {fileID: 0}
   troop0: {fileID: 114933770680719568, guid: c4b061aac61197a4a96e42fecbf54702, type: 2}
   troop1: {fileID: 114161927868107860, guid: e9a3d160fa1994b49ad16970046b2778, type: 2}
   troop2: {fileID: 114276095349175072, guid: 90e7dd6dd8e554b13ac28e95ed47e2be, type: 2}
   troop3: {fileID: 114751365574669720, guid: b88d943cafd48074bb6a436f16e42af7, type: 2}
+  insideTroop: {fileID: 114125814948438226, guid: 712313f6e6d020f40af264d302d27170,
+    type: 2}
+  troop4: {fileID: 114961285914803954, guid: 961b0c642a2d25d498b391adff4ec131, type: 2}
+  troop5: {fileID: 114338278885609590, guid: 0212bafee54b95748b9ab3f95a5b6939, type: 2}
+  troop0_button: {fileID: 0}
+  troop1_button: {fileID: 0}
+  troop2_button: {fileID: 0}
+  troop3_button: {fileID: 0}
+  troop4_button: {fileID: 0}
+  troop5_button: {fileID: 0}
+  speedup_button: {fileID: 0}
+  speedup_cost: 1000
+  rez_button: {fileID: 0}
+  rez_cost: 2500
 --- !u!124 &124015352954274804
 Behaviour:
   m_ObjectHideFlags: 1

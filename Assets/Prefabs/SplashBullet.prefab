@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 58767561175853202}
   m_Layer: 0
   m_Name: SplashBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b2f3a57475b5c4abad0ef00b9d088e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSender: {fileID: 0}
   bulletTime: 0
   maxBulletTime: 0
   dmg: 0

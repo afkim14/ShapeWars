@@ -7,22 +7,19 @@ public class FastTroop : Troop {
 
 	// Use this for initialization
 	void Start () {
-		maxHealth = 3;
+        ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
+        maxHealth = 3;
 		currHealth = maxHealth;
 		transform.localScale = new Vector3(0.1055172f, 0.1055172f, 0.1055172f);
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
+        speedMult = 3.0f;
+        setupDirection();
+        cost = ga.troop_costs[1];
+    }
 
-		if (SceneManager.GetActiveScene().buildIndex == 1)
-		{
-			direction = new Vector3(0, -1, 0);
-		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (SceneManager.GetActiveScene().buildIndex == 1)
-		{
-			transform.Translate(direction * Time.deltaTime * 3);
-		}
-	}
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed") + 1);
+        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 50);
+    }
 }

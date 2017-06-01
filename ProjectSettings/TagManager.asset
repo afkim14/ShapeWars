@@ -16,6 +16,7 @@ TagManager:
   - WallRightDown
   - WallLeftUp
   - WallUpLeft
+  - Bullet
   layers:
   - Default
   - TransparentFX

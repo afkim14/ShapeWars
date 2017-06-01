@@ -90,6 +90,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1819856298217878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4612287125296054}
+  - component: {fileID: 61993651116018380}
+  m_Layer: 0
+  m_Name: WallDownRight (1)
+  m_TagString: WallDownRight
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1886420783474566
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +171,7 @@ Transform:
   - {fileID: 4801256710608386}
   - {fileID: 4727893991190546}
   - {fileID: 4465219263029432}
+  - {fileID: 4612287125296054}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -183,6 +200,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4207829884748980}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4612287125296054
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1819856298217878}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.53, y: 1.19, z: 43.89016}
+  m_LocalScale: {x: 0.48766837, y: 0.48766842, z: 0.48766842}
+  m_Children: []
+  m_Father: {fileID: 4207829884748980}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4649527715366720
 Transform:
@@ -260,9 +290,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.7232894, y: 3.1557698}
+  m_Offset: {x: 0.72328943, y: 4.8989053}
   serializedVersion: 2
-  m_Size: {x: 0.92177916, y: 2.5462332}
+  m_Size: {x: 0.92177916, y: 6.032501}
 --- !u!61 &61109333541446186
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -274,9 +304,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.51158667, y: 2.167304}
+  m_Offset: {x: -1.5888038, y: 2.167304}
   serializedVersion: 2
-  m_Size: {x: 2.395237, y: 0.92892647}
+  m_Size: {x: 4.5496697, y: 0.92892647}
 --- !u!61 &61320440813469732
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -288,9 +318,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.2758774, y: 2.1196885}
+  m_Offset: {x: 4.5662804, y: 2.1196883}
   serializedVersion: 2
-  m_Size: {x: 1.8091843, y: 0.69183636}
+  m_Size: {x: 8.389992, y: 0.69183636}
 --- !u!61 &61473042562426196
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -302,9 +332,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.1147122, y: 2.7818284}
+  m_Offset: {x: 2.4073727, y: 2.781828}
   serializedVersion: 2
-  m_Size: {x: 1.7798815, y: 0.39181805}
+  m_Size: {x: 4.3652005, y: 0.39181805}
 --- !u!61 &61496647164247294
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -316,9 +346,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.51158667, y: 1.8587953}
+  m_Offset: {x: -1.4125324, y: 1.8587953}
   serializedVersion: 2
-  m_Size: {x: 2.395237, y: 1.182991}
+  m_Size: {x: 4.1971297, y: 1.182991}
 --- !u!61 &61617099669620342
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -330,9 +360,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.11600065, y: 2.203434}
+  m_Offset: {x: -0.1159996, y: -1.4003469}
   serializedVersion: 2
-  m_Size: {x: 1.428248, y: 1.8722687}
+  m_Size: {x: 1.428248, y: 9.07983}
 --- !u!61 &61675259994552994
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -344,6 +374,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.5802722, y: 1.881103}
+  m_Offset: {x: 0.5802728, y: -1.076343}
   serializedVersion: 2
-  m_Size: {x: 0.91478586, y: 1.1690073}
+  m_Size: {x: 0.91478586, y: 7.0838995}
+--- !u!61 &61993651116018380
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1819856298217878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 2.4073727, y: 2.781828}
+  serializedVersion: 2
+  m_Size: {x: 4.3652005, y: 0.39181805}

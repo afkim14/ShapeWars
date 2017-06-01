@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
+    public Turret bulletSender;
     public float bulletTime;
     public float maxBulletTime;
     public int dmg;

@@ -12,22 +12,13 @@ public class InsideContainerTroop : Troop {
         currHealth = maxHealth;
         transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            direction = new Vector3(0, -1, 0);
-        }
+        speedMult = 2.0f;
+        setupDirection();
     }
-    // Update is called once per frame
-    void Update()
+
+    private void OnDestroy()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            transform.Translate(direction * Time.deltaTime * 2);
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            //rb2d.AddForce((Vector2.right * 2.0f));
-        }
+        PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed") + 1);
+        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 50);
     }
 }

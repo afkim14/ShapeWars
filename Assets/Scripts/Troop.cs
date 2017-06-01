@@ -11,10 +11,47 @@ public class Troop : MonoBehaviour {
     public float currSpeed;
     public Vector3 direction;
     public float minSpeed = 0.5f;
+    public float speedMult;
     public GameObject deathParticle;
-    private GameAdmin ga;
+    public GameAdmin ga;
+    public bool rezzed;
 
-    private void OnTriggerEnter2D(Collider2D col)
+    public bool frozen;
+    public float temp_speedMult;
+    public float frozenTime;
+    public float frozenCooldown = 2.0f;
+
+    public int cost;
+
+    public void setupDirection()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            direction = new Vector3(0, -1, 0);
+        }
+    }
+
+    // Update is called once per frame
+    public virtual void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            transform.Translate(direction * Time.deltaTime * speedMult);
+        }
+
+        if (frozen)
+        {
+            frozenTime += Time.deltaTime;
+            if (frozenTime > frozenCooldown)
+            {
+                speedMult = temp_speedMult;
+                frozen = false;
+                frozenTime = 0.0f;
+            }
+        }
+    }
+
+    public virtual void OnTriggerEnter2D(Collider2D col)
     {
         if (direction.x == 0) { currSpeed = Mathf.Abs(direction.y); }
         else { currSpeed = Mathf.Abs(direction.x); }
@@ -37,16 +74,21 @@ public class Troop : MonoBehaviour {
         }
     }
 
-    public void Damage(int dmg)
+    public virtual void Damage(int dmg)
     {
         if (currHealth - dmg <= 0)
         {
-            // delete it from active troops
+            if (!rezzed)
+            {
+                ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
+                string type = gameObject.GetComponent<Troop>().name;
+                Vector2 pos = new Vector2(gameObject.GetComponent<Troop>().transform.position.x, gameObject.GetComponent<Troop>().transform.position.y);
+                Vector2 dir = new Vector2(gameObject.GetComponent<Troop>().direction.x, gameObject.GetComponent<Troop>().direction.y);
+                TroopCopy tp = new TroopCopy(type, pos, dir);
+                ga.deadTroops.Add(tp);
+            }
             Instantiate(deathParticle, transform.position, transform.rotation);
             Destroy(gameObject);
-            PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed")+1);
-            PlayerPrefs.SetInt("dp_score", PlayerPrefs.GetInt("dp_score") + 100);
-            PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 50);
         }
 
         currHealth -= dmg;
@@ -83,7 +125,7 @@ public class Troop : MonoBehaviour {
     private void OnMouseDown()
     {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
-        if (ga.destroySelectsLeft > 0)
+        if ((ga.destroySelectButtonPressed) && (ga.destroySelectsLeft > 0))
         {
             Destroy(gameObject);
             ga.destroySelectsLeft--;

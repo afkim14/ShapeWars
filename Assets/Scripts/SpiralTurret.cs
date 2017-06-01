@@ -24,6 +24,7 @@ public class SpiralTurret : Turret {
 	
 	// Update is called once per frame
 	void Update () {
+        cost = ga.turret_costs[2];
         shootingPoints = new Transform[5] { shootingPoint1, shootingPoint2, shootingPoint3, shootingPoint4, shootingPoint5};
         shootingPointsRef = new Transform[5] { shootingPoint1ref, shootingPoint2ref, shootingPoint3ref, shootingPoint4ref, shootingPoint5ref };
         if (placed)
@@ -33,7 +34,7 @@ public class SpiralTurret : Turret {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
 
             // shoot
-            if (placed)
+            if (placed && !paralyzed)
             {
                 if (currentCollisions.Count > 0)
                 {
@@ -46,6 +47,7 @@ public class SpiralTurret : Turret {
                         {
                             Vector2 direction = shootingPointsRef[i].position - shootingPoints[i].position;
                             Bullet bulletClone = Instantiate(bullet, shootingPoints[i].transform.position, shootingPoints[i].transform.rotation);
+                            bulletClone.bulletSender = gameObject.GetComponent<Turret>();
                             bulletClone.maxBulletTime = 1.0f;
                             bulletClone.dmg = 5;
                             bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;

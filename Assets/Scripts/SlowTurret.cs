@@ -17,7 +17,8 @@ public class SlowTurret : Turret {
     // Update is called once per frame
     void Update()
     {
-        if (placed)
+        cost = ga.turret_costs[3];
+        if (placed && !paralyzed)
         {
             if (currentCollisions.Count > 0)
             {
@@ -38,6 +39,7 @@ public class SlowTurret : Turret {
                             Vector2 direction = enemy.transform.position - transform.position;
                             SlowBullet bulletClone;
                             bulletClone = Instantiate(bullet, shootingPoints[i].transform.position, shootingPoints[i].transform.rotation);
+                            bulletClone.bulletSender = gameObject.GetComponent<Turret>();
                             bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
                             shootTime = 0.0f;
                         }

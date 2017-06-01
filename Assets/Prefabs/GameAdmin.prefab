@@ -51,12 +51,24 @@ MonoBehaviour:
   dp_score_text: {fileID: 0}
   dp_turrets_built_text: {fileID: 0}
   dp_troops_killed_text: {fileID: 0}
+  troop_costs: 
+  turret_costs: 
   timer_text: {fileID: 0}
   gameTimer: 0
   currentGameTime: 0
   gameTimerInterval: 1
   gameOverMenu: {fileID: 0}
+  destroy_button: {fileID: 0}
+  destroySelectButtonPressed: 0
+  destroyCost: 5000
+  totalDestroySelects: 5
   destroySelectsLeft: 0
+  freeze_button: {fileID: 0}
+  freezeButtonPressed: 0
+  freezeCost: 2000
+  speedUpButtonPressed: 0
+  rezButtonPressed: 0
+  userTroopAlive: 0
 --- !u!224 &224524930495532044
 RectTransform:
   m_ObjectHideFlags: 1

@@ -13,7 +13,8 @@ public class SplashTurret : Turret {
 
     void Update()
     {
-        if (placed)
+        cost = ga.turret_costs[1];
+        if ((placed) && (!paralyzed))
         {
             if (currentCollisions.Count > 0)
             {
@@ -27,6 +28,7 @@ public class SplashTurret : Turret {
                         Bullet bulletClone;
                         bulletClone = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
                         bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+                        bulletClone.bulletSender = gameObject.GetComponent<Turret>();
                         shootTime = 0.0f;
                     }
                 }

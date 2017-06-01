@@ -11,8 +11,16 @@ public class TurretAttackRange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
+        for (int i = 0; i < allObjects.Length; i++)
+        {
+            GameObject obj = allObjects[i];
+            if (obj.activeInHierarchy && obj.CompareTag("Turret"))
+            {
+                Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
+            }
+        }
+    }
     
     private void OnTriggerEnter2D(Collider2D col)
     {
