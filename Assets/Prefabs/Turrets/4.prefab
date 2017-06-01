@@ -152,6 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f2372032846b74584749c33b5c4af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ga: {fileID: 0}
+  placed: 0
+  placed_pos: {x: 0, y: 0, z: 0}
+  troop_in_range: 0
+  currentCollisions: []
+  paralyzed: 0
+  paralyzedTime: 0
+  paralyzedLimit: 3
+  cost: 0
   shootingPoint: {fileID: 4566085888191736}
   bullet: {fileID: 114719249104976368, guid: 3d88208285e21c34cb7ded7ded513f42, type: 2}
   target: {fileID: 0}

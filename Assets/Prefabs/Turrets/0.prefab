@@ -168,6 +168,10 @@ MonoBehaviour:
   placed_pos: {x: 0, y: 0, z: 0}
   troop_in_range: 0
   currentCollisions: []
+  paralyzed: 0
+  paralyzedTime: 0
+  paralyzedLimit: 3
+  cost: 0
   shootingPoint: {fileID: 4730067861669546}
   bullet: {fileID: 114594017643282198, guid: 907982f466e024f46841479c9a590ae7, type: 2}
   target: {fileID: 0}

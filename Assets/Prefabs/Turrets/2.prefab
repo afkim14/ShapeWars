@@ -429,6 +429,10 @@ MonoBehaviour:
   placed_pos: {x: 0, y: 0, z: 0}
   troop_in_range: 0
   currentCollisions: []
+  paralyzed: 0
+  paralyzedTime: 0
+  paralyzedLimit: 3
+  cost: 0
   shootingPoint1: {fileID: 4777801161309938}
   shootingPoint2: {fileID: 4630805142511752}
   shootingPoint3: {fileID: 4637800886369438}
