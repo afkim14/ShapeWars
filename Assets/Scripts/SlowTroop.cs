@@ -8,11 +8,11 @@ public class SlowTroop : Troop {
 	// Use this for initialization
 	void Start () {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
-        maxHealth = 10;
+        maxHealth = 20;
 		currHealth = maxHealth;
 		transform.localScale = new Vector3(0.1355172f, 0.1355172f, 0.1355172f);
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
-        speedMult = 0.5f;
+        speedMult = 0.8f;
         setupDirection();
         cost = ga.troop_costs[2];
     }
@@ -20,6 +20,6 @@ public class SlowTroop : Troop {
     private void OnDestroy()
     {
         PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed") + 1);
-        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 100);
+        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 10);
     }
 }

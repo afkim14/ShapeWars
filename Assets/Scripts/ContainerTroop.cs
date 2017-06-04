@@ -8,17 +8,18 @@ public class ContainerTroop : Troop {
     public Troop insideTroop;
     private int troopsMade = 0;
     private float currTime = 0.0f;
-    private float currInterval = 1.0f;
+    private float currInterval = 1.3f;
+    public bool containerBroken;
 
     // Use this for initialization
     void Start()
     {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
-        maxHealth = 7;
+        maxHealth = 13;
         currHealth = maxHealth;
         transform.localScale = new Vector3(0.1727068f, 0.1727068f, 0.1727068f);
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-        speedMult = 2.0f;
+        speedMult = 1.1f;
         setupDirection();
         cost = ga.troop_costs[3];
     }
@@ -27,6 +28,7 @@ public class ContainerTroop : Troop {
     {
         if (currHealth <= 0)
         {
+            containerBroken = true;
             currTime += Time.deltaTime;
             if (currTime > currInterval)
             {
@@ -85,6 +87,6 @@ public class ContainerTroop : Troop {
     private void OnDestroy()
     {
         PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed") + 1);
-        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 300);
+        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 5);
     }
 }

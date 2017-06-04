@@ -42,9 +42,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void RestartGame()
     {
-        PlayerPrefs.SetInt("ap_score", 0);
         PlayerPrefs.SetInt("ap_money", 0);
-        PlayerPrefs.SetInt("dp_score", 0);
         PlayerPrefs.SetInt("dp_money", 0);
         PlayerPrefs.SetInt("turrets_built", 0);
         PlayerPrefs.SetInt("troops_sent", 0);
@@ -55,6 +53,6 @@ public class PauseMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }

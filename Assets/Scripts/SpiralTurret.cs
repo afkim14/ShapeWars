@@ -19,7 +19,7 @@ public class SpiralTurret : Turret {
     public Bullet bullet;
     private float bulletTime;
     private int bulletSpeed = 30;
-    private float shootInterval = 0.5f;
+    private float shootInterval = 1.0f;
     private int rotation = 0;
 	
 	// Update is called once per frame

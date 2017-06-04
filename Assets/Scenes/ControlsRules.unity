@@ -91,141 +91,146 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &742822134
+--- !u!1001 &251558510
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224540100685764130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 224152439583871470, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 223392290166969746, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 1991480824240968, guid: bd830714ed4f177478f43eee18c8d783, type: 2}
+      propertyPath: m_Name
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 223946620727894858, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1498340391}
-    - target: {fileID: 1157252805398002, guid: ca9d2f0ffc989334489602ae33f196e6, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564510498362258, guid: ca9d2f0ffc989334489602ae33f196e6, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963480659577928, guid: ca9d2f0ffc989334489602ae33f196e6, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646871232756198, guid: ca9d2f0ffc989334489602ae33f196e6,
-        type: 2}
-      propertyPath: m_Text
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174317230393788, guid: ca9d2f0ffc989334489602ae33f196e6, type: 2}
-      propertyPath: m_Name
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 114591155145439130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 114262241316235640, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1498340393}
-    - target: {fileID: 114591155145439130, guid: ca9d2f0ffc989334489602ae33f196e6,
+    - target: {fileID: 114587716267211458, guid: bd830714ed4f177478f43eee18c8d783,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: quit
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1498340393}
+    - target: {fileID: 114516464825479904, guid: bd830714ed4f177478f43eee18c8d783,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1498340393}
+    - target: {fileID: 114344274967886506, guid: bd830714ed4f177478f43eee18c8d783,
+        type: 2}
+      propertyPath: m_Text
+      value: "The Shape community has fallen into chaos. Only two major groups remain.\nWho
+        will end up victorious?\n\nObjective:\n\t- Attacker: get as many troops across
+        the map before time expires.\n\t- Defender: prevent troops from getting across
+        by building turrets.\nControls (Attacking Player):\n\t- Use keys 1-6 to create
+        different troop units.\n\t- Attacker can access skills with \",\" and \".\"
+        keys.\n\t- Note: Half way through the game, the attacker will earn more money.\nControls
+        (Defending Player):\n\t- Use mouse to create different turret units.\n\t-
+        Click on skill buttons to activate them."
+      objectReference: {fileID: 0}
+    - target: {fileID: 224483153168129222, guid: bd830714ed4f177478f43eee18c8d783,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ca9d2f0ffc989334489602ae33f196e6, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: bd830714ed4f177478f43eee18c8d783, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1319773961
 Prefab:
@@ -318,8 +323,8 @@ Camera:
   m_GameObject: {fileID: 1498340387}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.41176474, g: 0.7607844, b: 0.5294118, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

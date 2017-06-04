@@ -98,6 +98,13 @@ MonoBehaviour:
   deathParticle: {fileID: 1721445755098936, guid: d57b8dc0c8aea2e48b979554dbe6ca4f,
     type: 2}
   ga: {fileID: 0}
+  rezzed: 0
+  frozen: 0
+  enhanced: 0
+  temp_speedMult: 0
+  frozenTime: 0
+  frozenCooldown: 2
+  cost: 0
   turretsParalyzed: 0
   noShieldObject: {fileID: 21300000, guid: 21ef3ab8d0cedc84b97cfd14e737b315, type: 3}
 --- !u!212 &212756374277359346

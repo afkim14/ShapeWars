@@ -12,8 +12,18 @@ public class SplashParticle : MonoBehaviour {
     {
         if (other.CompareTag("Troop"))
         {
-            Troop enemy = other.GetComponent<Troop>();
-            enemy.Damage(0.1f);
+            if (other.name.Contains("ContainerTroop") && !other.name.Contains("InsideContainerTroop"))
+            {
+                if (!(other.gameObject.GetComponent<ContainerTroop>().containerBroken))
+                {
+                    Troop enemy = other.GetComponent<Troop>();
+                    enemy.Damage(0.07f);
+                }
+            } else
+            {
+                Troop enemy = other.GetComponent<Troop>();
+                enemy.Damage(0.07f);
+            }
         }
     }
 

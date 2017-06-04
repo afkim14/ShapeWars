@@ -35,14 +35,14 @@ public class MainMenu : MonoBehaviour {
     public void StartGame()
     {
         SceneManager.LoadScene(1);
-        PlayerPrefs.SetInt("ap_score", 0);
         PlayerPrefs.SetInt("ap_money", 0);
-        PlayerPrefs.SetInt("dp_score", 0);
         PlayerPrefs.SetInt("dp_money", 0);
         PlayerPrefs.SetInt("turrets_built", 0);
         PlayerPrefs.SetInt("troops_sent", 0);
         PlayerPrefs.SetInt("troops_killed", 0);
         PlayerPrefs.SetInt("homeLivesLeft", 30);
+        PlayerPrefs.SetString("tempattplayername", "");
+        PlayerPrefs.SetString("tempdefplayername", "");
     } 
 
     public void QuitGame()

@@ -107,6 +107,6 @@ public class ParalyzeTroop : Troop {
     private void OnDestroy()
     {
         PlayerPrefs.SetInt("troops_killed", PlayerPrefs.GetInt("troops_killed") + 1);
-        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 300);
+        PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") + 8);
     }
 }

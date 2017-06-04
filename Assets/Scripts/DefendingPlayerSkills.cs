@@ -14,6 +14,8 @@ public class DefendingPlayerSkills : MonoBehaviour {
     private float freezeCurrTime;
     private float freezeCooldown = 2.0f;
 
+    public AudioSource freezeSound;
+
     // Use this for initialization
     void Start () {
         ga = GameObject.FindGameObjectWithTag("GameAdmin").GetComponent<GameAdmin>();
@@ -24,31 +26,15 @@ public class DefendingPlayerSkills : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (ga.destroySelectsLeft == 0) {
-            delete5CurrTime += Time.deltaTime;
-            if (delete5CurrTime > delete5Cooldown)
-            {
-                ga.destroySelectsLeft = ga.totalDestroySelects;
-                ga.destroySelectButtonPressed = false;
-                ga.destroy_button.interactable = true;
-                delete5CurrTime = 0.0f;
-            }
+            ga.destroySelectsLeft = ga.totalDestroySelects;
+            ga.destroySelectButtonPressed = false;
         }
         delete5Troops_button.GetComponentInChildren<Text>().text = "Delete " + ga.destroySelectsLeft.ToString() + " Troops";
-
-        if (ga.freezeButtonPressed)
-        {
-            freezeCurrTime += Time.deltaTime;
-            if (freezeCurrTime > freezeCooldown)
-            {
-                ga.freezeButtonPressed = false;
-                ga.freeze_button.interactable = true;
-                freezeCooldown = 0.0f;
-            }
-        }
     }
 
     public void Delete5Troops()
     {
+
         PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") - ga.destroyCost);
         ga.destroySelectButtonPressed = true;
         ga.destroy_button.interactable = false;
@@ -57,6 +43,7 @@ public class DefendingPlayerSkills : MonoBehaviour {
 
     public void FreezeTroops()
     {
+        freezeSound.Play();
         PlayerPrefs.SetInt("dp_money", PlayerPrefs.GetInt("dp_money") - ga.freezeCost);
         GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
         for (int i = 0; i < allObjects.Length; i++)

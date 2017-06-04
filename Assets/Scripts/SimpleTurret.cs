@@ -7,9 +7,9 @@ public class SimpleTurret : Turret {
     public Transform shootingPoint;
     public Bullet bullet;
     public Transform target;
-    private int bulletSpeed = 4;
+    private int bulletSpeed = 6;
     private float shootTime;
-    private float shootInterval = 0.3f;
+    private float shootInterval = 0.6f;
 
     // Update is called once per frame
     void Update () {

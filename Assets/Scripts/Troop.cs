@@ -15,8 +15,9 @@ public class Troop : MonoBehaviour {
     public GameObject deathParticle;
     public GameAdmin ga;
     public bool rezzed;
-
     public bool frozen;
+    public bool enhanced;
+    public bool halftime_upgraded;
     public float temp_speedMult;
     public float frozenTime;
     public float frozenCooldown = 2.0f;
@@ -47,6 +48,7 @@ public class Troop : MonoBehaviour {
                 speedMult = temp_speedMult;
                 frozen = false;
                 frozenTime = 0.0f;
+                ga.freezeButtonPressed = false;
             }
         }
     }

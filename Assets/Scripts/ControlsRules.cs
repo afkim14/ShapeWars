@@ -19,4 +19,14 @@ public class ControlsRules : MonoBehaviour {
     {
         SceneManager.LoadScene(1);
     }
+
+    public void troopInfo()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void turretInfo()
+    {
+        SceneManager.LoadScene(4);
+    }
 }

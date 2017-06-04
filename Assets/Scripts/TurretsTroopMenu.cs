@@ -44,14 +44,19 @@ public class TurretsTroopMenu : MonoBehaviour {
 
     // Attacking Player Skills
     public Button speedup_button;
-    public int speedup_cost = 1000;
+    public int speedup_cost = 1200;
     private float speedUpCurrTime;
     private float sppedUpCooldown = 2.0f;
 
     public Button rez_button;
-    public int rez_cost = 2500;
+    public int rez_cost = 1700;
     private float rezTime;
     private float rezCooldown = 2.0f;
+
+    // sounds
+    public AudioSource speedupSound;
+    public AudioSource rezSound;
+    public AudioSource turretSound;
 
     //int[] spawnIntervals = {100, 200, 300, 400, 100 };
     //int[] currIntervals = { 100, 100, 100, 100, 100 };
@@ -126,8 +131,15 @@ public class TurretsTroopMenu : MonoBehaviour {
         if (PlayerPrefs.GetInt("ap_money") >= rez_cost) { rez_button.interactable = true; }
         else { rez_button.interactable = false; }
 
-        if (PlayerPrefs.GetInt("dp_money") >= ga.destroyCost) { ga.destroy_button.interactable = true; }
-        else { ga.destroy_button.interactable = false; }
+        if (PlayerPrefs.GetInt("dp_money") >= ga.destroyCost) {
+            if (!ga.destroySelectButtonPressed)
+            {
+                ga.destroy_button.interactable = true;
+            }
+        }
+        else {
+            ga.destroy_button.interactable = false;
+        }
 
         if (PlayerPrefs.GetInt("dp_money") >= ga.freezeCost) { ga.freeze_button.interactable = true; }
         else { ga.freeze_button.interactable = false; }
@@ -201,6 +213,7 @@ public class TurretsTroopMenu : MonoBehaviour {
         // Attacking Player Skills
         if (Input.GetKeyDown(KeyCode.Comma) && speedup_button.interactable)
         {
+            speedupSound.Play();
             PlayerPrefs.SetInt("ap_money", PlayerPrefs.GetInt("ap_money") - speedup_cost);
             GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
             for (int i = 0; i < allObjects.Length; i++)
@@ -216,19 +229,9 @@ public class TurretsTroopMenu : MonoBehaviour {
             speedup_button.interactable = false;
         }
 
-        if (ga.speedUpButtonPressed)
-        {
-            speedUpCurrTime += Time.deltaTime;
-            if (speedUpCurrTime > sppedUpCooldown)
-            {
-                ga.speedUpButtonPressed = false;
-                speedup_button.interactable = true;
-                speedUpCurrTime = 0.0f;
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.Period) && rez_button.interactable && ga.deadTroops.Count > 0)
         {
+            rezSound.Play();
             PlayerPrefs.SetInt("ap_money", PlayerPrefs.GetInt("ap_money") - rez_cost);
             TroopCopy tp = ga.deadTroops[ga.deadTroops.Count - 1];
             Troop newTroop = null;
@@ -245,17 +248,6 @@ public class TurretsTroopMenu : MonoBehaviour {
 
             // clear list
             ga.deadTroops = new List<TroopCopy>();
-        }
-
-        if (ga.rezButtonPressed)
-        {
-            rezTime += Time.deltaTime;
-            if (rezTime > rezCooldown)
-            {
-                ga.rezButtonPressed = false;
-                rez_button.interactable = true;
-                rezTime = 0.0f;
-            }
         }
     }
 
@@ -287,6 +279,7 @@ public class TurretsTroopMenu : MonoBehaviour {
         {
             if (ga.can_place_turret)
             {
+                turretSound.Play();
                 // fix the turret in place
                 PlayerPrefs.SetInt("turrets_built", PlayerPrefs.GetInt("turrets_built") + 1);
                 ga.curr_turret_held.placed = true;

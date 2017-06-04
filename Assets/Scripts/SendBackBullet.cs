@@ -21,10 +21,25 @@ public class SendBackBullet : Bullet {
     {
         if (col.CompareTag("Troop"))
         {
-            if (SceneManager.GetActiveScene().buildIndex == 3)
+            if (col.gameObject.name.Contains("ContainerTroop") && !col.gameObject.name.Contains("InsideContainerTroop"))
             {
-                col.gameObject.GetComponent<Troop>().transform.position = new Vector3(troopEntryPoint.position.x, troopEntryPoint.position.y, 0.0f);
-                col.gameObject.GetComponent<Troop>().direction = new Vector3(0, -1 * col.gameObject.GetComponent<Troop>().currSpeed, 0);
+                if (!(col.gameObject.GetComponent<ContainerTroop>().containerBroken))
+                {
+                    if (SceneManager.GetActiveScene().buildIndex == 3)
+                    {
+                        col.gameObject.GetComponent<Troop>().transform.position = new Vector3(troopEntryPoint.position.x, troopEntryPoint.position.y, 0.0f);
+                        col.gameObject.GetComponent<Troop>().direction = new Vector3(0, -1 * col.gameObject.GetComponent<Troop>().currSpeed, 0);
+                    }
+                }
+            }
+            else
+            {
+
+                if (SceneManager.GetActiveScene().buildIndex == 3)
+                {
+                    col.gameObject.GetComponent<Troop>().transform.position = new Vector3(troopEntryPoint.position.x, troopEntryPoint.position.y, 0.0f);
+                    col.gameObject.GetComponent<Troop>().direction = new Vector3(0, -1 * col.gameObject.GetComponent<Troop>().currSpeed, 0);
+                }
             }
 
             Destroy(gameObject);
