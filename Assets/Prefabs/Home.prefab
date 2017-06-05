@@ -68,6 +68,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homeLivesLeftText: {fileID: 0}
+  ga: {fileID: 0}
+  dmgSound: {fileID: 0}
 --- !u!212 &212846898567242038
 SpriteRenderer:
   m_ObjectHideFlags: 1

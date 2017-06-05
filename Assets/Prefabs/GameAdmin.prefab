@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224524930495532044}
   - component: {fileID: 114774850739731972}
+  - component: {fileID: 114435251972852248}
   m_Layer: 5
   m_Name: GameAdmin
   m_TagString: GameAdmin
@@ -27,6 +28,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114435251972852248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247276165941864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9043a4fe4dd52bb489bc864016b04f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
 --- !u!114 &114774850739731972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,12 +68,13 @@ MonoBehaviour:
   turret_costs: 
   timer_text: {fileID: 0}
   gameTimer: 0
+  ogGameTimer: 0
   currentGameTime: 0
   gameTimerInterval: 1
   gameOverMenu: {fileID: 0}
   destroy_button: {fileID: 0}
   destroySelectButtonPressed: 0
-  destroyCost: 5000
+  destroyCost: 2000
   totalDestroySelects: 5
   destroySelectsLeft: 0
   freeze_button: {fileID: 0}
@@ -69,6 +83,7 @@ MonoBehaviour:
   speedUpButtonPressed: 0
   rezButtonPressed: 0
   userTroopAlive: 0
+  ga: {fileID: 0}
 --- !u!224 &224524930495532044
 RectTransform:
   m_ObjectHideFlags: 1
